@@ -1,5 +1,15 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
 body{
-    background-color: antiquewhite;
+    display: flex;
+    background-color: white;
+    text-align: center;
+    flex-direction: column;
+    padding-top: 2%;
 }
 h1{
     font-family:monospace;
@@ -7,4 +17,29 @@ h1{
     text-align: center;
     font-size: 40px;
     font-weight: 100;
+}
+#container{
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    margin: 10px auto;
+}
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: space-evenly;
+    font-family: 'Audiowide';
+    color: white;
+}
+ul li{
+    background: #456990;
+    width:30%;
+    height:150px;
+    border:1px solid #208090;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 3rem;
+
 }
