@@ -15,7 +15,7 @@ h1{
     color:white;
     font-family: monospace;
     font-weight: 100;
-   
+    font-size: 40px;
 }
 #container {
     width: 500px;
@@ -32,15 +32,13 @@ ul {
     color: #E4FDE1;
 }
 ul li {
-    background: #456990;
+    background: #ffffff;
     width: 30%;
     height: 150px;
-    border: 1px solid #028090;
+    border: 1px solid #fff;
     margin-top: 10px;
     text-align: center;
-    font-size: 2rem;
-    padding-top: 3rem;
-}
+  }
 li{
     list-style: none;
 }
