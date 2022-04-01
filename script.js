@@ -4,8 +4,8 @@ window.onload = function () {
     let appendTens = document.getElementById("tens");
     let appendSeconds = document.getElementById("seconds");
     let buttonStart = document.getElementById("button-start");
-    let buttonStop = document.getElementById("button-stop");
-    let buttonShuffle =document.getElementById("button-shuffle");
+    let buttonPause = document.getElementById("button-pause");
+    let buttonStop =document.getElementById("button-stop");
     let Interval;
 
 buttonStart.onclick = function (){
@@ -13,12 +13,10 @@ buttonStart.onclick = function (){
     clearInterval(Interval);
     Interval = setInterval(startTimer, 10);
 }
-
-buttonStop.onclick = function() {
+buttonPause.onclick = function() {
     clearInterval(Interval);
 }
-
-buttonShuffle.onclick = function() {
+buttonStop.onclick = function() {
     clearInterval(Interval);
     tens = "00";
     seconds ="00";
