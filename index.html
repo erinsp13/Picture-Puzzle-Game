@@ -9,20 +9,20 @@
 <!--images-->
         <div id="container">
             <ul>
-                <li><img src= "./images/image1.jpg"></li>
-                <li><img src= "./images/image2.jpg"></li>
-                <li><img src= "./images/image3.jpg"></li>
-                <li><img src= "./images/image4.jpg"></li>
-                <li><img src= "./images/image5.jpg"></li>
-                <li><img src= "./images/image6.jpg"></li>
-                <li><img src= "./images/image7.jpg"></li>
-                <li><img src= "./images/image8.jpg"></li>
-                <li><img src= "./images/image9.jpg"></li>
+                <li id="cell1"><img src= "./images/image1.jpg"></li>
+                <li id="cell2"><img src= "./images/image2.jpg"></li>
+                <li id="cell3"><img src= "./images/image3.jpg"></li>
+                <li id="cell4"><img src= "./images/image4.jpg"></li>
+                <li id="cell5"><img src= "./images/image5.jpg"></li>
+                <li id="cell6"><img src= "./images/image6.jpg"></li>
+                <li id="cell7"><img src= "./images/image7.jpg"></li>
+                <li id="cell8" draggable="true" ondragstart="dragstart_handler(event)" ondragend="dragend_handler(event)"><img src= "./images/image8.jpg"></li>
+                <li id="cell9" class="empty" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"></li>
             </ul>
 <!--timer/buttons-->
         </div>
         <div class="wrapper">
-            <button id="button-start">Start</button>
+            <button id="button-start" onClick="shuffle();">Start</button>
             <button id="button-pause">Pause</button>
             <button id="button-stop">Stop</button>
          </div>
