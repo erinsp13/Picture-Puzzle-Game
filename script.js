@@ -6,18 +6,18 @@ window.onload = function () {
     let appendSeconds = document.getElementById("seconds");
     let buttonStart = document.getElementById("button-start");
     let buttonPause = document.getElementById("button-pause");
-    let buttonStop =document.getElementById("button-stop");
+    let buttonReset =document.getElementById("button-reset");
     let Interval;
+    
+    buttonStart.onclick = function (){
+      clearInterval(Interval);
+      Interval = setInterval(startTimer, 10);
+     }
 
-buttonStart.onclick = function (){
-
-    clearInterval(Interval);
-    Interval = setInterval(startTimer, 10);
-}
 buttonPause.onclick = function() {
     clearInterval(Interval);
 }
-buttonStop.onclick = function() {
+buttonReset.onclick = function() {
     clearInterval(Interval);
     tens = "00";
     seconds ="00";
@@ -48,7 +48,6 @@ function startTimer () {
         appendSeconds.innerHTML = seconds;
     }
 }
-
 }
 //PUZZLE FUNCTION
 function swapTiles(cell1,cell2) {
@@ -56,18 +55,16 @@ function swapTiles(cell1,cell2) {
   document.getElementById(cell1).className = document.getElementById(cell2).className;
   document.getElementById(cell2).className = temp;
 }
-
 function shuffle() {
-for (let row=1;row<=3;row++) { 
-   for (let column=1;column<=3;column++) { 
-  
-    let row2=Math.floor(Math.random()*3 + 1); 
-    let column2=Math.floor(Math.random()*3 + 1); 
-     
-    swapTiles("cell"+row+column,"cell"+row2+column2); 
+  for (let row=1;row<=3;row++) { 
+     for (let column=1;column<=3;column++) { 
+    
+      let row2=Math.floor(Math.random()*3 + 1); 
+      let column2=Math.floor(Math.random()*3 + 1); 
+      swapTiles("cell"+row+column,"cell"+row2+column2); 
+    } 
   } 
-} 
-}
+  } 
 
 function clickTile(row,column) {
   let cell = document.getElementById("cell"+row+column);
