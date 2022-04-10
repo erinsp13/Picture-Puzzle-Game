@@ -6,7 +6,6 @@ window.onload = function () {
   let appendSeconds = document.getElementById("seconds");
   let buttonStart = document.getElementById("button-start");
   let buttonPause = document.getElementById("button-pause");
-  let buttonReset =document.getElementById("button-reset");
   let Interval;
 
 buttonStart.onclick = function (){
@@ -17,13 +16,7 @@ buttonStart.onclick = function (){
 buttonPause.onclick = function() {
   clearInterval(Interval);
 }
-buttonReset.onclick = function() {
-  clearInterval(Interval);
-  tens = "00";
-  seconds ="00";
-  appendTens.innerHTML = tens;
-  appendSeconds.innerHTML = seconds;
-}
+
 
 function startTimer () {
   tens++;
