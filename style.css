@@ -8,7 +8,7 @@ BODY {
     height: 120px;
     border: 1px solid white;
     cursor: pointer;
-    background: url(image.jpg)
+    background: url(./images/image.jpeg)
   }
   
   .tile1 {background-position: left top;}
